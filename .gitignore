@@ -33,6 +33,11 @@ app/TodayTimetable.xcodeproj/
 # === Android (미포함) ===
 android/
 
-# === 기타 ===
+# === Firebase / 대회 / 기타 ===
+firebase/
+대회/
+docs/
 conversation-log.md
 대화기록_요약.md
+앱스토어_심사점검.md
+작업현황.md

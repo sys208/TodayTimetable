@@ -140,6 +140,33 @@ Submitted to the **8th Korean Education Public Data AI Competition** (2026)
 
 API keys, Firebase config files, and certificates are excluded from this repository for security. The `firebase/functions/src/index.ts` (containing API keys) is gitignored. See `.gitignore` for details.
 
+## Built with Claude Code
+
+This entire project was developed using **Claude Code (Opus 4.6)** as the primary development partner. Over **200+ iterative conversations** spanning weeks of development, Claude assisted with:
+
+- **Architecture design** — MVVM pattern, SwiftData models, Firebase Cloud Functions structure
+- **Full-stack implementation** — Swift 6, TypeScript, every line of 30+ Cloud Functions
+- **Complex algorithms** — Comcigan timetable parsing (handling `">number"` string edge cases in `자료542`), 10 different HTML crawling strategies for 13 education offices, timetable change detection via original vs modified data comparison
+- **AI integration** — Groq/Gemini API wrappers, JSON structured output, token optimization, key rotation on 429/403
+- **Real-time debugging** — Firebase Auth flow fixes, Firestore composite index issues, SwiftData `@Query` race conditions on app restart, FCM topic subscription timing
+- **Feature ideation** — Volunteer activity map from coordinate data, exam scope PDF extraction + AI structuring, classroom notice rich editor with markdown rendering
+
+### Why Claude Max would help
+
+As a **middle school student** building this solo, Claude Code is not just a tool — it's my entire development team. Every feature, bug fix, and architectural decision goes through Claude. With Max 20x, I could:
+
+- Expand crawling to all 17 education offices (currently 13)
+- Build the **Electron desktop app** for teacher timetable management (spec already written)
+- Add Android support
+- Continue iterating on AI features without hitting usage limits during intensive coding sessions
+
+### Development stats
+- **200+** Claude Code conversations
+- **30+** Cloud Functions written with Claude
+- **70+** app features implemented
+- **10** AI-powered features
+- **0** other developers — just me and Claude
+
 ## License
 
 MIT License
@@ -147,5 +174,6 @@ MIT License
 ---
 
 > Built by a Korean middle school student, for students everywhere.
+> Powered by Claude Code.
 >
 > *"Every day, millions of Korean students check their timetable, meals, and school events across scattered websites. TodayTimetable brings it all together with AI."*

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘시간표 - 지원</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', sans-serif;
+            background: #0a0a10;
+            color: #fff;
+            line-height: 1.7;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .bg-blur {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .bg-blur .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.4;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .orb-1 { width: 500px; height: 500px; background: #4580D9; top: -100px; left: -100px; }
+        .orb-2 { width: 400px; height: 400px; background: #7c3aed; bottom: -50px; right: -50px; animation-delay: -7s; }
+        .orb-3 { width: 300px; height: 300px; background: #2dd4bf; top: 50%; left: 50%; animation-delay: -14s; }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -40px) scale(1.05); }
+            66% { transform: translate(-20px, 30px) scale(0.95); }
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            position: relative;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .hero h1 {
+            font-size: 2.4em;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 10px;
+        }
+
+        .hero .accent { color: #5A95E9; }
+
+        .hero .subtitle {
+            color: rgba(255,255,255,0.5);
+            font-size: 1.1em;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 28px 32px;
+            margin-bottom: 20px;
+            transition: border-color 0.3s;
+        }
+
+        .glass:hover {
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .glass h2 {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 14px;
+            letter-spacing: -0.01em;
+        }
+
+        .glass p, .glass li {
+            color: rgba(255, 255, 255, 0.55);
+            font-size: 0.95em;
+        }
+
+        .glass ul {
+            padding-left: 18px;
+        }
+
+        .glass li {
+            margin-bottom: 6px;
+        }
+
+        .glass a {
+            color: #5A95E9;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(90,149,233,0.3);
+            transition: border-color 0.2s;
+        }
+
+        .glass a:hover {
+            border-color: #5A95E9;
+        }
+
+        .divider {
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, #4580D9, #7c3aed);
+            border-radius: 2px;
+            margin: 0 auto 40px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .feature-item {
+            background: rgba(255,255,255,0.04);
+            border-radius: 12px;
+            padding: 14px 16px;
+            font-size: 0.9em;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .footer {
+            margin-top: 60px;
+            text-align: center;
+            color: rgba(255,255,255,0.2);
+            font-size: 0.85em;
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 1.8em; }
+            .glass { padding: 22px 20px; }
+            .features-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-blur">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <div class="container">
+        <div class="hero">
+            <h1><span class="accent">오늘시간표</span></h1>
+            <p class="subtitle">AI 기반 학교생활 통합 도우미</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="glass">
+            <h2>소개</h2>
+            <p>전국 초/중/고등학교 학생을 위한 시간표, 급식, 학사일정 통합 앱입니다. NEIS 교육 공공데이터와 컴시간 알리미를 결합하여 실시간 시간표 변경 감지, AI 급식 이미지 생성 등 다양한 기능을 제공합니다.</p>
+        </div>
+
+        <div class="glass">
+            <h2>주요 기능</h2>
+            <div class="features-grid">
+                <div class="feature-item">실시간 시간표 변경 감지</div>
+                <div class="feature-item">AI 급식 이미지 미리보기</div>
+                <div class="feature-item">학사일정 / 시험 D-Day</div>
+                <div class="feature-item">홈 위젯 4종</div>
+                <div class="feature-item">잠금화면 위젯</div>
+                <div class="feature-item">Live Activity</div>
+                <div class="feature-item">Apple Watch</div>
+                <div class="feature-item">macOS 메뉴바 앱</div>
+                <div class="feature-item">카카오톡 공유</div>
+                <div class="feature-item">사진 AI 시간표 인식</div>
+                <div class="feature-item">Siri 연동</div>
+                <div class="feature-item">iCloud 기기 동기화</div>
+            </div>
+        </div>
+
+        <div class="glass">
+            <h2>문의 및 지원</h2>
+            <p>앱 사용 중 문제가 있거나 건의사항이 있으시면 아래로 연락해주세요.</p>
+            <p style="margin-top: 12px;"><a href="mailto:syselec208@gmail.com">syselec208@gmail.com</a></p>
+        </div>
+
+        <div class="glass">
+            <h2>개인정보 처리방침</h2>
+            <p>오늘시간표는 사용자의 개인정보를 수집하지 않습니다.</p>
+            <ul style="margin-top: 10px;">
+                <li>회원가입 없이 사용 가능</li>
+                <li>학교/학년/반 정보는 기기에만 저장</li>
+                <li>서버에 개인정보를 전송하지 않음</li>
+            </ul>
+        </div>
+
+        <div class="glass">
+            <h2>활용 데이터</h2>
+            <p><a href="https://open.neis.go.kr" target="_blank">NEIS 교육정보 개방포털</a>의 교육 공공데이터를 활용합니다.</p>
+            <p style="margin-top: 6px;">라이선스: 공공누리 제1유형 (출처 표시)</p>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 오늘시간표</p>
+        </div>
+    </div>
+</body>
+</html>

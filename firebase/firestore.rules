@@ -1,0 +1,10 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 캐시 데이터는 Cloud Functions에서만 읽기/쓰기
+    // 클라이언트는 직접 접근 불가 (Functions를 통해서만)
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

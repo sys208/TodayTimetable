@@ -1,0 +1,38 @@
+node_modules/
+firebase/functions/lib/
+firebase/.firebase/
+*.log
+.env
+.env.local
+
+# === API 키 / 인증서 / 비밀 (절대 공개 금지) ===
+app/TodayTimetable/GoogleService-Info.plist
+app/TodayTimetable/Services/APIConfig.swift
+app/TodayTimetable/Services/NewsService.swift
+android/app/google-services.json
+firebase/functions/src/index.ts
+firebase/wallet_key.pem
+firebase/wallet_cert.pem
+firebase/무제 폴더/
+*.p12
+*.pem
+*.cer
+*.mobileprovision
+
+# === Xcode ===
+app/DerivedData/
+app/*.xcuserdata/
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+app/TodayTimetable.xcodeproj/
+
+# === macOS ===
+.DS_Store
+.superpowers/
+
+# === Android (미포함) ===
+android/
+
+# === 기타 ===
+conversation-log.md
+대화기록_요약.md

@@ -1,0 +1,10 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // 뉴스 이미지: 누구나 읽기 가능, 서버만 쓰기
+    match /news/{allPaths=**} {
+      allow read: if true;
+      allow write: if false;
+    }
+  }
+}

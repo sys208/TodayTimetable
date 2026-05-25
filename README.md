@@ -7,6 +7,11 @@
 [![Firebase](https://img.shields.io/badge/Backend-Firebase-yellow)]()
 [![AI](https://img.shields.io/badge/AI-Groq%20%7C%20Gemini-green)]()
 [![Functions](https://img.shields.io/badge/Cloud%20Functions-30%2B-red)]()
+[![TestFlight](https://img.shields.io/badge/Download-TestFlight-0D96F6?logo=apple)](https://testflight.apple.com/join/nJmfUGMx)
+
+## Download
+
+**[Download on TestFlight](https://testflight.apple.com/join/nJmfUGMx)** — Try the latest beta on your iPhone, iPad, Mac, or Apple Watch.
 
 ## Overview
 
